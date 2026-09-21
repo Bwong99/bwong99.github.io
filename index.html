@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPEN 321 App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>CPEN 321 App</h1>
+  <p class="sub">A student coursework project for CPEN 321 Software Engineering at the University of British Columbia.</p>
+
+  <p>CPEN 321 App is an Android application built as an individual assignment for a
+  university software engineering course. It is not a commercial product and is not
+  distributed on the Google Play Store. It exists to demonstrate a small set of
+  course requirements.</p>
+
+  <h2>What the app does</h2>
+  <ul>
+    <li>Signs the user in with their Google account and displays the server's public IP
+        address, the device's IP address, the server and device local times, and the
+        signed-in user's name.</li>
+    <li>Displays a pixel-art image that assembles live, one cell at a time, from a
+        stream relayed by the app's own back-end server.</li>
+    <li>Runs a countdown timer that reveals a procedurally generated piece of pixel art
+        when it reaches zero.</li>
+  </ul>
+
+  <h2>Google sign-in</h2>
+  <p>The app uses Google Sign-In through Android's Credential Manager. It requests only
+  basic profile information &mdash; the <code>openid</code>, <code>email</code> and
+  <code>profile</code> scopes &mdash; and uses it solely to display the signed-in user's
+  first and last name on screen. See the <a href="privacy.html">privacy policy</a> for
+  details.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this app can be sent to
+  <a href="mailto:99pieguys@gmail.com">99pieguys@gmail.com</a>.</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </nav>
+</main>
+</body>
+</html>
