@@ -22,26 +22,32 @@
   Google service or device data.</p>
 
   <h2>How that information is used</h2>
-  <p>Google returns an identity token to the app on your device. The app reads your
-  first and last name from that token and displays them on screen, alongside the other
-  information the assignment requires. That is the only use.</p>
+  <p>Google returns an identity token to the app on your device. The app sends that
+  token to its own back-end server, which verifies it with Google and replies with the
+  first and last name it contains. The app displays that name on screen, alongside the
+  other information the assignment requires. That is the only use.</p>
 
   <h2>What is stored and transmitted</h2>
   <ul>
     <li>The app does <strong>not</strong> store your name, email address, identity token,
         or any other personal information. Nothing is written to disk and nothing
         persists after you close the screen.</li>
-    <li>The identity token is <strong>not</strong> transmitted to the project's back-end
-        server or to any third party. It is read on the device and discarded.</li>
+    <li>The identity token is sent to the project's back-end server, which verifies it
+        against Google's public signing keys to confirm the sign-in is genuine. The
+        server checks the token in memory, replies with the verified first and last
+        name, and discards it when the request finishes. It is never written to disk
+        and is not passed to any other party.</li>
     <li>The project operates no database, no user accounts, and no analytics,
         advertising, tracking or crash-reporting services.</li>
   </ul>
 
   <h2>The back-end server</h2>
-  <p>The app contacts a back-end server operated by the student author to retrieve the
-  server's own IP address, the server's local time, the author's name, and a relayed
-  stream of pixel-art updates. These requests carry no personal information about you.
-  The server keeps no logs that identify users.</p>
+  <p>The app contacts a back-end server operated by the student author to verify your
+  sign-in and to retrieve the server's own IP address, the server's local time, the
+  author's name, and a relayed stream of pixel-art updates. Each of those requests
+  carries your Google identity token so the server can confirm who is asking; the
+  server keeps nothing from it. Its diagnostic logs record only the technical reason a
+  sign-in was rejected, never your name, email address, or token.</p>
 
   <h2>Sharing</h2>
   <p>No information is sold, shared, or disclosed to anyone. There is nothing collected
@@ -56,7 +62,7 @@
 
   <h2>Contact</h2>
   <p>Questions about this policy can be sent to
-  <a href="mailto:99pieguys@gmail.com">99pieguys@gmail.com</a>.</p>
+  <a href="mailto:bwong999@student.ubc.ca">bwong999@student.ubc.ca</a>.</p>
 
   <nav>
     <a href="index.html">Home</a>
